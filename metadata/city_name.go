@@ -1,6 +1,6 @@
 package metadata
 
-var CityName = [...]string{
+var CityName = []string{
 	"北京市",
 	"上海市",
 	"天津市",

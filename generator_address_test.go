@@ -12,12 +12,12 @@ func TestAddress(t *testing.T) {
 
 func BenchmarkProvinceAndCity(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		b.Log(ProvinceAndCity())
+		ProvinceAndCity()
 	}
 }
 
 func BenchmarkAddress(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		b.Log(Address())
+		Address()
 	}
 }

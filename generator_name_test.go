@@ -8,6 +8,6 @@ func TestName(t *testing.T) {
 
 func BenchmarkName(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		b.Log(Name())
+		Name()
 	}
 }

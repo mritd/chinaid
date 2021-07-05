@@ -24,24 +24,24 @@ func TestRandDate(t *testing.T) {
 
 func BenchmarkIssueOrg(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		b.Log(IssueOrg())
+		IssueOrg()
 	}
 }
 
 func BenchmarkValidPeriod(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		b.Log(ValidPeriod())
+		ValidPeriod()
 	}
 }
 
 func BenchmarkIDNo(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		b.Log(IDNo())
+		IDNo()
 	}
 }
 
 func BenchmarkVerifyCode(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		b.Log(VerifyCode("636706198006242277"))
+		VerifyCode("636706198006242277")
 	}
 }

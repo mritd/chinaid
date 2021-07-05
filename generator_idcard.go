@@ -3,13 +3,14 @@ package chinaid
 import (
 	"fmt"
 	"github.com/mritd/chinaid/metadata"
+	"math/rand"
 	"strconv"
 	"time"
 )
 
 // IssueOrg 返回身份证签发机关(eg: XXX公安局/XX区分局)
 func IssueOrg() string {
-	return metadata.CityName[randInt(0, len(metadata.CityName))] + "公安局某某分局"
+	return metadata.CityName[rand.Intn(len(metadata.CityName))] + "公安局某某分局"
 }
 
 // ValidPeriod 返回身份证有效期限(eg: 20150906-20350906)，有效期限固定为 20 年
@@ -22,7 +23,7 @@ func ValidPeriod() string {
 // IDNo 返回中国大陆地区身份证号
 func IDNo() string {
 	// AreaCode 随机一个+4位随机数字(不够左填充0)
-	areaCode := metadata.AreaCode[randInt(0, len(metadata.AreaCode))] +
+	areaCode := metadata.AreaCode[rand.Intn(len(metadata.AreaCode))] +
 		fmt.Sprintf("%0*d", 4, randInt(1, 9999))
 	birthday := RandDate().Format("20060102")
 	randomCode := fmt.Sprintf("%0*d", 3, randInt(0, 999))

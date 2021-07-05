@@ -7,7 +7,7 @@ type CardBin struct {
 	Prefixes []int
 }
 
-var CardBins = [...]CardBin{
+var CardBins = []CardBin{
 	{
 		"工商银行",
 		19,

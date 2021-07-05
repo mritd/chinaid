@@ -17,13 +17,11 @@ func fixedLengthChineseChars(length int) string {
 
 // 指定范围随机中文字符
 func randomLengthChineseChars(start, end int) string {
-	length := randInt(start, end)
-	return fixedLengthChineseChars(length)
+	return fixedLengthChineseChars(randInt(start, end))
 }
 
 // 随机英文小写字母
 func randStr(len int) string {
-	rand.Seed(time.Now().UnixNano())
 	data := make([]byte, len)
 	for i := 0; i < len; i++ {
 		data[i] = byte(rand.Intn(26) + 97)
@@ -33,13 +31,11 @@ func randStr(len int) string {
 
 // 指定范围随机 int
 func randInt(min, max int) int {
-	rand.Seed(time.Now().UnixNano())
 	return min + rand.Intn(max-min)
 }
 
 // 指定范围随机 int64
 func randInt64(min, max int64) int64 {
-	rand.Seed(time.Now().UnixNano())
 	return min + rand.Int63n(max-min)
 }
 
@@ -50,4 +46,8 @@ func reverseString(s string) string {
 		runes[from], runes[to] = runes[to], runes[from]
 	}
 	return string(runes)
+}
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
 }

@@ -1,6 +1,6 @@
 package metadata
 
-var AreaCode = [...]string{
+var AreaCode = []string{
 	"11",
 	"12",
 	"13",

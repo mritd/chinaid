@@ -3,6 +3,7 @@ package chinaid
 import (
 	"fmt"
 	"math"
+	"math/rand"
 	"strconv"
 
 	"github.com/mritd/chinaid/metadata"
@@ -11,7 +12,7 @@ import (
 // BankNo 返回随机银行卡号，银行卡号符合LUHN 算法并且有正确的卡 bin 前缀
 func BankNo() string {
 	// 随机选中银行卡卡头
-	bank := metadata.CardBins[randInt(0, len(metadata.CardBins))]
+	bank := metadata.CardBins[rand.Intn(len(metadata.CardBins))]
 	// 获取 卡前缀(cardBin)
 	prefixes := bank.Prefixes
 	// 获取当前银行卡正确长度

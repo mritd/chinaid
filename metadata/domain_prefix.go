@@ -1,6 +1,6 @@
 package metadata
 
-var DomainSuffix = [...]string{
+var DomainSuffix = []string{
 	".biz",
 	".cloud",
 	".club",

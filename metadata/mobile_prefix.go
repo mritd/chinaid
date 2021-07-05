@@ -1,6 +1,6 @@
 package metadata
 
-var MobilePrefix = [...]string{
+var MobilePrefix = []string{
 	"130",
 	"131",
 	"132",

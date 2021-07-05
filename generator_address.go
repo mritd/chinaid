@@ -2,12 +2,13 @@ package chinaid
 
 import (
 	"github.com/mritd/chinaid/metadata"
+	"math/rand"
 	"strconv"
 )
 
 // ProvinceAndCity 返回随机省/城市
 func ProvinceAndCity() string {
-	return metadata.ProvinceCity[randInt(0, len(metadata.ProvinceCity))]
+	return metadata.ProvinceCity[rand.Intn(len(metadata.ProvinceCity))]
 }
 
 // Address 返回随机地址

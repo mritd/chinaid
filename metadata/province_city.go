@@ -1,6 +1,6 @@
 package metadata
 
-var ProvinceCity = [...]string{
+var ProvinceCity = []string{
 	"黑龙江省齐齐哈尔市",
 	"黑龙江省黑河市",
 	"黑龙江省鹤岗市",

@@ -8,6 +8,6 @@ func TestMobile(t *testing.T) {
 
 func BenchmarkMobile(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		b.Log(Mobile())
+		Mobile()
 	}
 }

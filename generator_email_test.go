@@ -8,6 +8,6 @@ func TestEmail(t *testing.T) {
 
 func BenchmarkEmail(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		b.Log(Email())
+		Email()
 	}
 }
