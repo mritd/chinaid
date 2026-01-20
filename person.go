@@ -225,7 +225,11 @@ func (b *PersonBuilder) generateIDNo(p *Person) {
 
 // generateName generates the name.
 func (b *PersonBuilder) generateName(p *Person) {
-	p.lastName = b.rng.Choice(metadata.LastName)
+	if b.rng.Intn(100) < 97 { // 97% 单姓, 3% 复姓
+		p.lastName = b.rng.Choice(metadata.SingleLastName)
+	} else {
+		p.lastName = b.rng.Choice(metadata.CompoundLastName)
+	}
 
 	if p.gender == GenderMale {
 		p.firstName = b.rng.Choice(metadata.MaleFirstNames)
