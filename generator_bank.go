@@ -6,7 +6,7 @@ import (
 	"math/rand"
 	"strconv"
 
-	"github.com/mritd/chinaid/metadata"
+	"github.com/mritd/chinaid/v2/metadata"
 )
 
 // BankNo 返回随机银行卡号，银行卡号符合LUHN 算法并且有正确的卡 bin 前缀

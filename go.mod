@@ -1,3 +1,3 @@
-module github.com/mritd/chinaid
+module github.com/mritd/chinaid/v2
 
-go 1.17
+go 1.25

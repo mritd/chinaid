@@ -1,7 +1,7 @@
 package chinaid
 
 import (
-	"github.com/mritd/chinaid/metadata"
+	"github.com/mritd/chinaid/v2/metadata"
 	"math/rand"
 	"strconv"
 )
