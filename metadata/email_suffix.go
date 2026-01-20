@@ -12,7 +12,6 @@ var EmailSuffixes = []string{
 	"139.com",
 	"189.com",
 	"foxmail.com",
-	"aliyun.com",
 	"yeah.net",
 	"tom.com",
 	"21cn.com",
