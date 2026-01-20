@@ -357,30 +357,6 @@ var Provinces = []Province{
 			{Name: "喀什地区", AreaCodes: []string{"653100"}},
 		},
 	},
-	{
-		Name: "台湾省", Short: "台湾", Code: "71",
-		Cities: []City{
-			{Name: "台北市", AreaCodes: []string{"710100"}},
-			{Name: "高雄市", AreaCodes: []string{"710200"}},
-			{Name: "台中市", AreaCodes: []string{"710300"}},
-			{Name: "台南市", AreaCodes: []string{"710400"}},
-		},
-	},
-	{
-		Name: "香港特别行政区", Short: "香港", Code: "81",
-		Cities: []City{
-			{Name: "香港岛", AreaCodes: []string{"810100"}},
-			{Name: "九龙", AreaCodes: []string{"810200"}},
-			{Name: "新界", AreaCodes: []string{"810300"}},
-		},
-	},
-	{
-		Name: "澳门特别行政区", Short: "澳门", Code: "82",
-		Cities: []City{
-			{Name: "澳门半岛", AreaCodes: []string{"820100"}},
-			{Name: "氹仔岛", AreaCodes: []string{"820200"}},
-		},
-	},
 }
 
 // ProvinceMap 省份名称到 Province 的映射

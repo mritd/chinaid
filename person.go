@@ -243,7 +243,12 @@ func (b *PersonBuilder) generateAddress(p *Person) {
 
 	houseNum := b.rng.IntRange(1, 201)
 	unit := b.rng.IntRange(1, 9)
-	floor := b.rng.IntRange(1, 31)
+	var floor int
+	if b.rng.Intn(10) < 8 { // 80%: 1-9 层 (3位房号)
+		floor = b.rng.IntRange(1, 10)
+	} else { // 20%: 10-25 层 (4位房号)
+		floor = b.rng.IntRange(10, 26)
+	}
 	room := b.rng.IntRange(1, 5)
 	roomNo := floor*100 + room
 
@@ -285,7 +290,7 @@ func (b *PersonBuilder) generateEmail(p *Person) {
 		prefix = b.rng.Choice(metadata.EmailPrefixes)
 	}
 
-	num := b.rng.Intn(10000)
+	num := b.rng.IntRange(1000, 99999999) // 4-8 digits
 	suffix := b.rng.Choice(metadata.EmailSuffixes)
 
 	p.email = fmt.Sprintf("%s%d@%s", prefix, num, suffix)
