@@ -1,4 +1,3 @@
-// person_test.go
 package chinaid
 
 import (

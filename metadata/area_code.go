@@ -1,4 +1,3 @@
-// area_code.go
 package metadata
 
 // Province 省份信息

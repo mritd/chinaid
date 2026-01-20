@@ -114,6 +114,13 @@ valid := chinaid.ValidateLUHN("6222021234567890123")
 | `ValidateIDNo(string)` | 验证身份证号校验码 |
 | `ValidateLUHN(string)` | 验证银行卡 LUHN 校验 |
 
+### 拼音转换
+
+| 函数 | 说明 |
+|------|------|
+| `ConvertPinyin(string)` | 汉字转拼音 (如 "张三" → "zhangsan") |
+| `ConvertPinyinFirst(string)` | 汉字转拼音首字母 (如 "张三" → "zs") |
+
 ## 生成数据说明
 
 - **姓名**: 使用常用姓氏 + 按性别分类的名字，约 10000+ 个名字
@@ -122,6 +129,27 @@ valid := chinaid.ValidateLUHN("6222021234567890123")
 - **银行卡号**: 正确的银行卡 BIN + LUHN 算法校验
 - **邮箱**: 姓名拼音或常用前缀 + 常用邮箱后缀
 - **地址**: 真实省市区数据 + 路名/小区词库
+
+## 从 v1 迁移
+
+v2 为全新重构版本, 与 v1 API 不兼容:
+
+```go
+// v1 (已废弃)
+idNo := chinaid.GenerateIDCard()
+name := chinaid.GenerateName()
+
+// v2 (推荐)
+person := chinaid.NewPerson().Build()
+idNo := person.IDNo()
+name := person.Name()
+```
+
+**主要变更:**
+- 使用 Builder 模式替代独立函数
+- 生成数据自动关联 (身份证省份与地址一致)
+- 支持并发安全
+- 名字按性别分类
 
 ## License
 

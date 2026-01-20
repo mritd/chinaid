@@ -1,4 +1,3 @@
-// rand.go
 package chinaid
 
 import (

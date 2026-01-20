@@ -1,4 +1,3 @@
-// common_chars.go
 package metadata
 
 // CommonChars 地址生成用常用汉字

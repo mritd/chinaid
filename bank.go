@@ -1,4 +1,3 @@
-// bank.go
 package chinaid
 
 func calculateLUHNCheckDigit(cardNo string) int {

@@ -1,4 +1,3 @@
-// types.go
 package chinaid
 
 // Gender 性别枚举

@@ -1,4 +1,3 @@
-// email_suffix.go
 package metadata
 
 // EmailSuffixes 常用邮箱后缀

@@ -1,4 +1,3 @@
-// pinyin_map.go
 package metadata
 
 // PinyinMap 汉字到拼音的映射（覆盖所有姓氏和常用名字用字）

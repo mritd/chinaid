@@ -1,4 +1,3 @@
-// street_name.go
 package metadata
 
 // StreetNames contains common Chinese street and road names (500+ entries)

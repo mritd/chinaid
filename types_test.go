@@ -1,4 +1,3 @@
-// types_test.go
 package chinaid
 
 import "testing"

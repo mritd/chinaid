@@ -1,4 +1,3 @@
-// pinyin.go
 package chinaid
 
 import (

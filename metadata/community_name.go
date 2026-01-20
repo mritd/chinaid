@@ -1,4 +1,3 @@
-// community_name.go
 package metadata
 
 // CommunityNames contains common Chinese residential community names (500+ entries)

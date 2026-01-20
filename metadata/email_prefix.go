@@ -1,4 +1,3 @@
-// email_prefix.go
 package metadata
 
 // EmailPrefixes 常用邮箱前缀（非拼音类）

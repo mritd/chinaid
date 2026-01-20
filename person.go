@@ -1,4 +1,3 @@
-// person.go
 package chinaid
 
 import (
